@@ -1,4 +1,20 @@
-<!doctype html>
+<?php
+
+    require_once 'vendor/autoload.php';
+
+    $file = "https://raw.githubusercontent.com/a-radziuk/tt/main/readme.md";
+
+    // Instantiate Parsedown
+    $parsedown = new Parsedown();
+
+    // Assume you've loaded your README.md content into $markdown
+    $markdown = file_get_contents($file);
+
+    // Convert Markdown to HTML
+    $readmeMd = $parsedown->text($markdown);
+
+
+?><!doctype html>
 <html lang="en" data-bs-theme="auto">
   <head><script src="../assets/js/color-modes.js"></script>
 
@@ -11,13 +27,14 @@
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/starter-template/">
 
-    
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css">
 
-<link href="/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link href="/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/github.min.css">
 
-    <style>
+
+      <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -242,28 +259,9 @@
 
       <div class="col-md-12">
         <h2 class="text-body-emphasis">More examples</h2>
-
-        <p>Your first php-tt test case</p>
-        <p>
-          <code><pre>
-    /**
-     * @param string $class
-     * @return string
-     * @php-tt-assert 'test' >>> 'testTranslation'
-     */
-    private function getTranslationClassName(string $class): string
-    {
-        return $class . 'Translation';
-    }
-
-      </pre></code>
-        </p>
-        <p>
-          Run tests
-        </p>
-        <p>
-          <code>php testrunner.php</code>
-        </p>
+        <div class="markdown-body">
+            <?php echo $readmeMd; ?>
+        </div>
       </div>
     </div>
   </main>
@@ -272,6 +270,10 @@
   </footer>
 </div>
 <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+    <script>hljs.highlightAll();</script>
 
     </body>
 </html>
