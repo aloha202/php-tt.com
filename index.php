@@ -214,7 +214,7 @@
         <h2 class="text-body-emphasis">More info</h2>
         <ul class="list-unstyled ps-0">
           <li>
-            <a class="icon-link mb-1" href="https://github.com/a-radziuk/tt">
+            <a class="icon-link mb-1" href="https://github.com/radziuk/php-tt">
               <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
               On GitHub
             </a>
