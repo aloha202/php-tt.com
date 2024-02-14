@@ -2,7 +2,9 @@
 
     require_once 'vendor/autoload.php';
 
-    $file = "https://raw.githubusercontent.com/a-radziuk/tt/main/readme.md";
+    $file = "https://raw.githubusercontent.com/radziuk/php-tt/master/readme.md";
+
+    $delim = "**********";
 
     // Instantiate Parsedown
     $parsedown = new Parsedown();
@@ -10,8 +12,11 @@
     // Assume you've loaded your README.md content into $markdown
     $markdown = file_get_contents($file);
 
+    $exploded = explode($delim, $markdown);
+
     // Convert Markdown to HTML
-    $readmeMd = $parsedown->text($markdown);
+    $mainMd = $parsedown->text($exploded[0]);
+    $otherMd = $parsedown->text($exploded[1]);
 
 
 ?><!doctype html>
@@ -202,41 +207,7 @@
     <div class="row g-5">
       <div class="col-md-6">
         <h2 class="text-body-emphasis">Let's get started</h2>
-        <p>Install the package</p>
-        <p>
-          <code>
-            composer require aradziuk/php-tt
-          </code>
-        </p>
-        <p>Set up executable</p>
-        <p>
-          <code>
-            touch testrunner.php
-          </code>
-        </p>
-        <p>In the testrunner.php file:</p>
-        <p>
-          <code><pre>
-            &lt;?php
-
-
-    require __DIR__.'/vendor/autoload.php';
-
-
-    $tt = new \Aradziuk\PhpTT\Tt();
-
-    $tt->run(
-            __DIR__ . '/app', //dir with your classes
-            );
-
-      </pre></code>
-        </p>
-        <p>
-          Run tests
-        </p>
-        <p>
-          <code>php testrunner.php</code>
-        </p>
+          <?php echo $mainMd; ?>
       </div>
 
       <div class="col-md-6">
@@ -260,7 +231,7 @@
       <div class="col-md-12">
         <h2 class="text-body-emphasis">More examples</h2>
         <div class="markdown-body">
-            <?php echo $readmeMd; ?>
+            <?php echo $otherMd; ?>
         </div>
       </div>
     </div>
