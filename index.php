@@ -25,10 +25,8 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.118.2">
-    <title>Starter Template · Bootstrap v5.3</title>
+    <meta name="description" content="php-tt is a lightweight PHP library that allows you to write unit tests for methods of your class right in the docblock of the method, saving you lots of time and effort">
+    <title>php-tt - Docblock Unit Testing</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/starter-template/">
 
@@ -37,22 +35,10 @@
 
       <link href="/assets/dist/css/bootstrap.min.css" rel="stylesheet">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/github.min.css">
-
+      <link href="/assets/css/styles.css" rel="stylesheet">
 
       <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
 
       .b-example-divider {
         width: 100%;
@@ -229,7 +215,6 @@
       </div>
 
       <div class="col-md-12">
-        <h2 class="text-body-emphasis">More examples</h2>
         <div class="markdown-body">
             <?php echo $otherMd; ?>
         </div>
