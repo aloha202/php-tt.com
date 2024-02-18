@@ -28,8 +28,6 @@
     <meta name="description" content="php-tt is a lightweight PHP library that allows you to write unit tests for methods of your class right in the docblock of the method, saving you lots of time and effort">
     <title>php-tt - Docblock Unit Testing</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/starter-template/">
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css">
 
