@@ -180,10 +180,8 @@
       php-tt is a lightweight PHP library that allows you to write unit tests for methods of your class right in the docblock of the method, saving you lots of time and effort
     </p>
 
-    <div class="mb-5">
-      <!--
-      <a href="../examples/" class="btn btn-primary btn-lg px-4">Buy me a coffee</a>
-      -->
+    <div class="mb-5 img-banner">
+        <img src="/assets/img/phptt_image3.png" alt="" />
     </div>
 
     <hr class="col-3 col-md-2 mb-5">

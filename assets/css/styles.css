@@ -6,3 +6,8 @@ html[data-bs-theme=dark] .markdown-body h4{
 html[data-bs-theme=dark] .markdown-body p {
     color: #fff;
 }
+
+.img-banner{
+    position: relative;
+    left: -30px;
+}
