@@ -1,3 +1,4 @@
+html[data-bs-theme=dark] .markdown-body h2,
 html[data-bs-theme=dark] .markdown-body h3,
 html[data-bs-theme=dark] .markdown-body h4{
     color: #eee;
